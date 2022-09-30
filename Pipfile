@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+# The versions should be specified but for the moment it's not so critical
 faker = "*"
 requests = "*"
 loguru = "*"

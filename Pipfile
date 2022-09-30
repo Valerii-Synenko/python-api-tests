@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+faker = "*"
+requests = "*"
+loguru = "*"
+pytest-env = "*"
+allure-pytest = "*"
+jsonpath-rw = "*"
+pyhamcrest = "*"
+pydantic = "*"
+pytest = "*"
+black = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

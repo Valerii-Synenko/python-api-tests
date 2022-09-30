@@ -1,6 +1,5 @@
 from hamcrest import equal_to, not_none
-
-from src.conditions.conditions import status_code, body_field
+from src.conditions.conditions import body_field, status_code
 from src.responses.assertable_response import AssertableResponse
 
 

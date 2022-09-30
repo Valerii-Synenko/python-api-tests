@@ -1,6 +1,5 @@
 import abc
 
-
 import jsonpath_rw
 from hamcrest import assert_that
 from hamcrest.core.matcher import Matcher
@@ -38,7 +37,11 @@ class BodyFieldCondition(Condition):
             )
             assert_that(parsed_field_value_from_response, self._hamcrest_matcher)
         except IndexError as index_error:
-            assert_reason = f"{repr(index_error)}. The response does not contain any field by jsonpath: '{parsed_field_value_from_response}'"
+            assert_reason = (
+                f"{repr(index_error)}."
+                f" The response does not contain any field by jsonpath: "
+                f"'{parsed_field_value_from_response}'"
+            )
             assert_that(False, reason=assert_reason)
 
     def __init__(self, json_path: str, hamcrest_matcher: Matcher):
@@ -47,7 +50,10 @@ class BodyFieldCondition(Condition):
         self._hamcrest_matcher = hamcrest_matcher
 
     def __repr__(self):
-        return f"body field [{self._json_path_to_field_in_response}] = {self._hamcrest_matcher}"
+        return (
+            f"body field [{self._json_path_to_field_in_response}] = "
+            f"{self._hamcrest_matcher}"
+        )
 
 
 body_field = BodyFieldCondition

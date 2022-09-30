@@ -1,7 +1,7 @@
 import os
 
 import requests
-from requests import post, delete
+from requests import delete, post
 
 
 class BaseApiService(object):

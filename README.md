@@ -54,4 +54,5 @@ From the root of the project run
 ```sh
 allure serve /Users/valeriisynenko/PycharmProjects/apiTestsPython/allure_results
 ```
-(After this tests should open your browser with an allure report of the previous test run)
+After this tests should open your browser with an allure report of the previous test run.
+More info about [Allure Report](https://qameta.io/allure-report/)
